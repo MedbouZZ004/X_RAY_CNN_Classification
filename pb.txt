@@ -1,0 +1,11 @@
+using normal CNN : 
+Why your model failed?
+Issue	Evidence
+Dataset is too small	Only 148 training images
+Too many trainable parameters	11+ million parameters 🤯
+Flatten layer creates huge feature vector	86,528 features → leads to 11M parameters
+No augmentation?	Even with light augmentation, not enough
+Validation set too small (only 40!)	Leads to unstable metrics
+
+➡️ This architecture is too big for your dataset.
+➡️ You need either transfer learning or a smaller CNN.
